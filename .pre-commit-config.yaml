@@ -1,0 +1,32 @@
+---
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.4.0
+    hooks:
+      - id: check-yaml
+        args: ['--allow-multiple-documents']
+      - id: end-of-file-fixer
+      - id: mixed-line-ending
+        args: ['--fix=lf']
+      - id: sort-simple-yaml
+      - id: trailing-whitespace
+  - repo: https://github.com/detailyang/pre-commit-shell
+    rev: 1.0.5
+    hooks:
+      - id: shell-lint
+  - repo: https://github.com/Lucas-C/pre-commit-hooks
+    rev: v1.1.7
+    hooks:
+      - id: remove-tabs
+        exclude_types: [makefile, binary]
+  - repo: https://github.com/adrienverge/yamllint.git
+    rev: v1.19.0
+    hooks:
+      - id: yamllint
+  - repo: https://github.com/danielhoherd/pre-commit-hooks
+    rev: 1a8d3b95b329e8aecd81ce0620a220f4053b46f0
+    hooks:
+      - id: remove-unicode-non-breaking-spaces
+      - id: remove-unicode-zero-width-non-breaking-spaces
+      - id: remove-en-dashes
+      - id: sort-gitignore
