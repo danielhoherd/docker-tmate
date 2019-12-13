@@ -35,3 +35,8 @@ docker run \
 # Caveats
 
 - Hostnames that are given by tmate are the docker container name, which is not helpful for actually connecting. You will need to replace the hostname with whatever you intend your client to connect to.
+
+# Links
+
+- <https://tmate.io>
+- <https://hub.docker.com/r/tmate/tmate-ssh-server>
